@@ -1,0 +1,16 @@
+body {
+  color: #0ac3e0;
+}
+.jumbotron {
+/* background-image: linear-gradient(rgba(13, 233, 233, 0.623), rgb(205, 240, 247)); */
+background-color: hsla(185, 33%, 93%, 0.61);
+}
+.radio-inline {
+padding-left: 2px;
+padding-right: 2px;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #0ac3e0;
+  border-color: #117a8b;
+}

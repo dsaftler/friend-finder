@@ -1,0 +1,23 @@
+{
+  "name": "friend-finder",
+  "version": "1.0.0",
+  "description": "Form to data via express",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dsaftler/friend-finder.git"
+  },
+  "keywords": [
+    "friend-finder"
+  ],
+  "author": "Diana Saftler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dsaftler/friend-finder/issues"
+  },
+  "homepage": "https://github.com/dsaftler/friend-finder#readme"
+}
