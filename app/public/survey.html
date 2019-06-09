@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- <link href="https://fonts.googleapis.com/css?family=Laila&display=swap" rel="stylesheet"> -->
-  <link rel="stylesheet" href="style.css">
+   <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <title>Survey</title>
@@ -33,21 +33,21 @@
               <input type="text" class="form-control" id="photo">
             </div>
            
-            <div class = 'form-horizontal'>
+            <div id ='Q1' class = 'form-horizontal'>
               <h4>Question 1 ?</h4>
               <label style="padding-right: 1px;">Strongly Agree&gt;</label>        
-              <label class="radio-inline"><input type="radio" name="survey" id="Q1-1" value="1">&nbsp;1</label>
-              <label class="radio-inline"><input type="radio" name="survey" id="Q1-2" value="2">&nbsp;2</label>
-              <label class="radio-inline"><input type="radio" name="survey" id="Q1-3" value="3">&nbsp;3</label>
-              <label class="radio-inline"><input type="radio" name="survey" id="Q1-4" value="4">&nbsp;4</label>
-              <label class="radio-inline"><input type="radio" name="survey" id="Q1-5" value="5">&nbsp;5</label>
+              <label class="radio-inline"><input type="radio" name="survey1" id="Q1-1" value="1">&nbsp;1</label>
+              <label class="radio-inline"><input type="radio" name="survey1" id="Q1-2" value="2">&nbsp;2</label>
+              <label class="radio-inline"><input type="radio" name="survey1" id="Q1-3" value="3">&nbsp;3</label>
+              <label class="radio-inline"><input type="radio" name="survey1" id="Q1-4" value="4">&nbsp;4</label>
+              <label class="radio-inline"><input type="radio" name="survey1" id="Q1-5" value="5">&nbsp;5</label>
               <!-- </div> -->
               <label></label>&lt;Strongly Disagree</label>
             </div>
-             <div class='form-horizontal'>
+             <div id='Q2' class='form-horizontal'>
                <h4>Question 2 ?</h4>
                <label style="padding-right: 1px;">Strongly Agree&gt;</label>
-               <label class="radioradio-inline"><input type="radio" name="survey2" id="Q2-1" value="1">&nbsp;1</label>
+               <label class="radio-inline"><input type="radio" name="survey2" id="Q2-1" value="1">&nbsp;1</label>
                <label class="radio-inline"><input type="radio" name="survey2" id="Q2-2" value="2">&nbsp;2</label>
                <label class="radio-inline"><input type="radio" name="survey2" id="Q2-3" value="3">&nbsp;3</label>
                <label class="radio-inline"><input type="radio" name="survey2" id="Q2-4" value="4">&nbsp;4</label>
@@ -58,10 +58,28 @@
           </form>
           <br>
           <div class ="text-right">
-             <a href="./routing/apiRoutes"></a><button type="submit" class="btn btn-primary btn-md" id="add-btn"><span
+             <a href="./routing/apiRoutes"></a><button type="submit" class="btn btn-primary btn-md" id="submitSurvey"><span
                 class="fa fa-thumbs-up"></span>&nbsp;Submit
               your Survey</button>
 
+          </div>
+        </div>
+        <!-- Show your match -->
+        <div id="match" class="modal" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3 class="modal-title">Here's our best match</h1>
+              </div>
+              <div class="modal-body">
+                <h2 id="matchName"></h2>
+                <img id="matchPhoto" src="#">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -71,6 +89,41 @@
     </div>
 
   </div>
-  
+<script>
+$("#submitSurvey").on("click", function (event) {
+  event.preventDefault();
+  // console.log("stop");
+  var scoresRA = [];
+  for (let i = 0; i<2; i++) {
+    qScore =  $(':checked')[i].value
+    console.log(qScore);
+   
+    scoresRA.push(qScore)
+  }
+  var newFriend = {
+      name: $("#name").val().trim(),
+      photo: $("#photo").val().trim(),
+      scores: scoresRA
+      };
+console.log(newFriend);
+  debugger;
+  // var test = matchfriend();
+  $.post("/api/friends",newFriend)
+    .then (function(data) {
+      console.log(data);
+      alert("Adding your survey");
+    // // return the match   //   $post("/api/friends", newFriend, function (data) {
+    //   $("#matchName").text(data.name);
+    //   $("#matchPhoto").attr("src", data.photo);
+    //   $("#match").modal("toggle");
+
+  });
+});
+
+
+
+
+</script>
 </body>
+
 </html>

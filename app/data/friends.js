@@ -7,6 +7,7 @@ var friendsRA =
 { name: "Hello kitty", photo: "https://www.google.com/imgres?imgurl=https%3A%2F%2Fimages-na.ssl-images-amazon.com%2Fimages%2FI%2F51e0IN0EqZL._SX425_.jpg&imgrefurl=https%3A%2F%2Fwww.amazon.com%2FHello-Kitty-Vynil-Sticker-Decal%2Fdp%2FB00DSD72TS&docid=TdRKEWRvP-tdQM&tbnid=IVv7Ji_b7OgYTM%3A&vet=10ahUKEwj6l9zli8ziAhUUFzQIHd5pDFkQMwh3KAAwAA..i&w=425&h=422&bih=1257&biw=1280&q=hello%20kitty&ved=0ahUKEwj6l9zli8ziAhUUFzQIHd5pDFkQMwh3KAAwAA&iact=mrc&uact=8", scores: ["3", "3", "3", "3", "3", "3", "3", "3", "3", "3"] }, 
 { name: "Toucan", photo: "https://upload.wikimedia.org/wikipedia/commons/8/83/Toucan_Toco_in_Iguazu.jpg", scores: ["5", "5", "5", "5", "5", "5", "5", "1", "3", "2"] }, 
 { name: "Frank", photo: "https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg", scores: ["1", "4", "2", "5", "3", "3", "4", "3", "1", "1"] }, 
-{ name: "Diana", photo: "https://i.imgur.com/UxkQCn7.jpg", scores: ["4", "3", "2", "4", "1", "2", "4", "2", "2", "1"] }]
+{ name: "Diana", photo: "https://i.imgur.com/UxkQCn7.jpg", scores: ["4", "3", "2", "4", "1", "2", "4", "2", "2", "1"] }
+];
 
 module.exports = friendsRA;
