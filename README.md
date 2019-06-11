@@ -17,6 +17,12 @@ New user entries are not written to the friends.js file, so refreshing the Surve
 
 There is validation to check for all form values being filled, but not to validate that a photo is a valid photo.
 
+Issues: 
+I was very frustrated by my inability to find a debugger that would follow from the html to the api scripts.  I was using Chrome debugger with folders open and vsCode debugger attached to node, but could not get breakpoints to pause where & when I needed them too.
+
 Future builds: 
-Post testing, the modal should return to the Home page.
+Post testing, the modal should return to the Home page or blank out the values in the survey.  For testing, though, it saves the time of re-entering for submit.
+
+I dislike meaningless tasks, so I would like to structure the questions to at least test a single personality aspect, like introversion/extroversion.
+
 I would like to include style sheets to over-ride several bootstrap  settings, but don't know how to reference the css through the express calls.

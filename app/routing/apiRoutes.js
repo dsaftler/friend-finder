@@ -39,13 +39,13 @@ module.exports = function(app) {
     var bestName = '';
     
     //  calculate the difference between each element of the survey array and store score with that with the username
-    console.log('Friends Length: '+friends.length)
+    // console.log('Friends Length: '+friends.length)
     friendLoop: for (let j = 0; j < friends.length; j++){
       // console.log(friends[j]);
       theseScores=friends[j].scores;
       // console.log((friends[j]).name.trim() + ' ' + myName);
       if ((friends[j]).name.trim() === myName) {
-        console.log(`There is already a friend named: `&{myName});
+        // console.log(`There is already a friend named: `&{myName});
         continue friendLoop
       }
       var myDiff = 0;
