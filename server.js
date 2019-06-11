@@ -3,6 +3,8 @@ const app = express();
 const bodyParser = require("body-parser");
 const path = require("path");
 const PORT = process.env.PORT || 3000;
+console.log(__dirname);
+app.use(express.static(path.join(__dirname, './app/public')))
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 // Sets up the Express app to handle data parsing
