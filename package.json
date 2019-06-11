@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/dsaftler/friend-finder/issues"
   },
-  "homepage": "https://github.com/dsaftler/friend-finder#readme"
+  "homepage": "https://github.com/dsaftler/friend-finder#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
